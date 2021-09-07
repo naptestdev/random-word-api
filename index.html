@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Word API</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: 100;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      table {
+        width: 100%;
+        overflow: auto;
+        border-spacing: 10px;
+        border: 1px solid #ececec;
+      }
+
+      table * {
+        text-align: left;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #181a1b;
+        }
+        *,
+        a {
+          color: #e8e6e3;
+        }
+        table {
+          border: 1px solid #353a3c;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Random Word API</h1>
+    <div style="padding: 0 10%">
+      <h3><span style="color: #1e90ff">GET</span> <a href="/word" target="_blank">/word</a></h3>
+      <h4>Get one random word</h4>
+      <h4>Parameters</h4>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Needed</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>min</td>
+          <td>Optional</td>
+          <td>Minimum length of the word</td>
+        </tr>
+        <tr>
+          <td>max</td>
+          <td>Optional</td>
+          <td>Maximum length of the word</td>
+        </tr>
+      </table>
+      <h3 style="margin-top: 50px"><span style="color: #1e90ff">GET</span> <a href="/words?num=10" target="_blank">/words?num=10</a></h3>
+      <h4>Get list of random words</h4>
+      <h4>Parameters</h4>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Needed</th>
+          <th>Usage</th>
+        </tr>
+        <tr>
+          <td>num</td>
+          <td>Required</td>
+          <td>Numbers of words to receive</td>
+        </tr>
+        <tr>
+          <td>min</td>
+          <td>Optional</td>
+          <td>Minimum length of the words</td>
+        </tr>
+        <tr>
+          <td>max</td>
+          <td>Optional</td>
+          <td>Maximum length of the words</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
