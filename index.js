@@ -48,6 +48,17 @@ app.get("/words", (req, res) => {
   }
 });
 
+app.get("/all", (req, res) => {
+  if (Number(req.query.dl)) {
+    let data = JSON.stringify(words);
+    res.setHeader("Content-disposition", "attachment; filename= words.json");
+    res.setHeader("Content-type", "application/json");
+    res.send(data);
+  } else {
+    res.send(words);
+  }
+});
+
 app.use((req, res) => res.redirect("/"));
 
 const port = process.env.PORT || 5000;
